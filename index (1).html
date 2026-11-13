@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carl Klient O. Danao | Portfolio</title>
+  <meta name="description" content="Portfolio of Carl Klient O. Danao, a BSCS student: projects, certificates, skills, and contact details.">
+  <meta name="author" content="Carl Klient O. Danao">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23c9421a'/%3E%3Ctext x='50' y='68' font-size='54' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'%3ECD%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <header class="top">
+    <div class="brand">Carl Klient O. Danao</div>
+    <button id="theme-toggle" class="ghost" aria-pressed="false">Dark mode</button>
+  </header>
+
+  <nav role="tablist" aria-label="Main navigation">
+    <button role="tab" id="tab-home" data-tab="home" aria-controls="section-home" class="active" aria-selected="true">Home</button>
+    <button role="tab" id="tab-work" data-tab="work" aria-controls="section-work" aria-selected="false" tabindex="-1">Projects &amp; Certificates</button>
+    <button role="tab" id="tab-about" data-tab="about" aria-controls="section-about" aria-selected="false" tabindex="-1">About</button>
+    <button role="tab" id="tab-contact" data-tab="contact" aria-controls="section-contact" aria-selected="false" tabindex="-1">Contact</button>
+  </nav>
+
+  <main class="content">
+    <!-- HOME -->
+    <section id="section-home" role="tabpanel" aria-labelledby="tab-home">
+      <div class="hero">
+        <div>
+          <h1 class="gradient">Hi, I’m Carl.</h1>
+          <p class="typed-line">I’m a <strong id="typed"></strong><span class="caret" aria-hidden="true"></span></p>
+          <p>Hello! I’m Carl Klient O. Danao, a BSCS student. I’m here to share my journey, skills, and projects with you. Explore each section to see my work, certificates, and a little about me.</p>
+          <div class="row">
+            <button class="btn" data-goto="work">See my work</button>
+            <button class="btn outline" data-goto="contact">Say hello</button>
+          </div>
+          <div class="fact">
+            <button id="fact-btn" class="ghost">Random tech fun fact</button>
+            <p id="fact-text" aria-live="polite">Click the button for a fact. Click my photo for a surprise.</p>
+          </div>
+        </div>
+        <button class="pic" id="pic" title="Click me!">
+          <img src="html/carlklient.jpg" alt="Portrait of Carl Klient O. Danao">
+        </button>
+      </div>
+    </section>
+
+    <!-- PROJECTS & CERTIFICATES -->
+    <section id="section-work" role="tabpanel" aria-labelledby="tab-work" hidden>
+      <h2 class="gradient">Projects &amp; Certificates</h2>
+      <p>Click any picture to view it full size.</p>
+      <div class="chips" role="group" aria-label="Filter">
+        <button class="chip active" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" data-filter="certificate" aria-pressed="false">Certificates</button>
+        <button class="chip" data-filter="project" aria-pressed="false">Projects</button>
+        <button class="chip" data-filter="quiz" aria-pressed="false">Quizzes</button>
+      </div>
+      <div class="shots">
+        <figure class="shot" data-type="certificate"><button><img loading="lazy" src="html/Cert1.jpg" alt="Certificate 1"></button><figcaption>Certificate 1</figcaption></figure>
+        <figure class="shot" data-type="certificate"><button><img loading="lazy" src="html/Cert2.jpg" alt="Certificate 2"></button><figcaption>Certificate 2</figcaption></figure>
+        <figure class="shot" data-type="project"><button><img loading="lazy" src="html/Proj.png" alt="Project screenshot"></button><figcaption>Project</figcaption></figure>
+        <figure class="shot" data-type="quiz"><button><img loading="lazy" src="html/randomquiz3_1.jpg" alt="Quiz result 1"></button><figcaption>Quiz 1</figcaption></figure>
+        <figure class="shot" data-type="quiz"><button><img loading="lazy" src="html/random2_1.jpg" alt="Quiz result 2"></button><figcaption>Quiz 2</figcaption></figure>
+        <figure class="shot" data-type="quiz"><button><img loading="lazy" src="html/random3_1.jpg" alt="Quiz result 3"></button><figcaption>Quiz 3</figcaption></figure>
+        <figure class="shot" data-type="quiz"><button><img loading="lazy" src="html/random4_1.jpg" alt="Quiz result 4"></button><figcaption>Quiz 4</figcaption></figure>
+        <figure class="shot" data-type="quiz"><button><img loading="lazy" src="html/random5_1.jpg" alt="Quiz result 5"></button><figcaption>Quiz 5</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="section-about" role="tabpanel" aria-labelledby="tab-about" hidden>
+      <h2 class="gradient">About me</h2>
+      <h3>Introduction</h3>
+      <p>My name is Carl Klient O. Danao, a motivated developer eager to learn and grow in web and software development.</p>
+      <h3>Goals</h3>
+      <p>My goal is to keep improving my skills, build meaningful projects, and contribute to the tech community.</p>
+      <h3>Skills</h3>
+      <!-- Change data-level (0 to 100) to match how you rate yourself -->
+      <div class="skills">
+        <div class="skill" data-level="85"><div class="top"><span>Creativity</span><em></em></div><div class="bar"><span></span></div></div>
+        <div class="skill" data-level="75"><div class="top"><span>Time management</span><em></em></div><div class="bar"><span></span></div></div>
+        <div class="skill" data-level="90"><div class="top"><span>Teamwork</span><em></em></div><div class="bar"><span></span></div></div>
+        <div class="skill" data-level="70"><div class="top"><span>Organization</span><em></em></div><div class="bar"><span></span></div></div>
+        <div class="skill" data-level="80"><div class="top"><span>Responsive design</span><em></em></div><div class="bar"><span></span></div></div>
+        <div class="skill" data-level="85"><div class="top"><span>Problem solving</span><em></em></div><div class="bar"><span></span></div></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="section-contact" role="tabpanel" aria-labelledby="tab-contact" hidden>
+      <h2 class="gradient">Contact</h2>
+      <div class="contact">
+        <div>
+          <p>Have a question or an opportunity? Send a message and I’ll reply as soon as I can.</p>
+          <ul class="info">
+            <li>Email: <a id="email-link" href="mailto:danaocarlklientosorio@gmail.com">danaocarlklientosorio@gmail.com</a> <button id="copy-email" class="ghost small">Copy</button></li>
+            <li>GitHub: <a href="https://github.com/cxrldotnet" rel="noopener" target="_blank">github.com/cxrldotnet</a></li>
+            <li>LinkedIn: <a href="https://ph.linkedin.com/in/carl-klient-danao-36926644b" rel="noopener" target="_blank">linkedin.com/in/carl-klient-danao-36926644b</a></li>
+          </ul>
+        </div>
+        <form id="contact-form" novalidate>
+          <label>Your name <input name="name" required autocomplete="name"></label>
+          <label>Your email <input name="email" type="email" required autocomplete="email"></label>
+          <label>Message <textarea name="message" maxlength="500" required></textarea></label>
+          <small id="count">0 / 500</small>
+          <button class="btn" type="submit">Send message</button>
+          <small id="form-msg" role="alert"></small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <details>
+      <summary>Update and maintenance plan</summary>
+      <ul>
+        <li>Add each new project and certificate within two weeks of finishing it.</li>
+        <li>Review the About text and skills every semester.</li>
+        <li>Check that all links and images work once a month.</li>
+      </ul>
+    </details>
+    <p>&copy; <span id="year">2026</span> Carl Klient O. Danao</p>
+  </footer>
+
+  <dialog id="lightbox" aria-label="Image viewer">
+    <figure>
+      <img id="lb-img" alt="">
+      <figcaption id="lb-cap"></figcaption>
+    </figure>
+    <div class="lb-bar">
+      <button class="btn small" id="lb-prev">Previous</button>
+      <button class="btn small" id="lb-next">Next</button>
+      <button class="btn small outline" id="lb-close">Close</button>
+    </div>
+  </dialog>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
